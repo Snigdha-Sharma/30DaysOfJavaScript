@@ -1,0 +1,1 @@
+const webtechs=['Yii','Angular','HTML','CSS','Javascript','Meteor JS','Express.js','Zend','Django','Laravel','Ruby on rails','CoffeeScript']
