@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <b id='year'>2020</b></h1>
+        <a href='SampleProject.html'><h2>30DaysOfJavaScript Challenge</h2></a>
+        <h3 id='date'></h3>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+    <script>
+        allListItems=document.querySelectorAll('li')
+        console.log(allListItems)
+        allListItems.forEach((item,i)=>{
+            item.style.textAlign='center'
+            item.style.listStyle='none'
+        })
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        allListItems[0].style.backgroundColor='GREEN'
+        allListItems[1].style.backgroundColor='YELLOW'
+        allListItems[2].style.backgroundColor='RED'
+        allListItems[3].style.backgroundColor='RED'
+        allListItems[4].style.backgroundColor='RED'
+        allListItems[5].style.backgroundColor='RED'
+        allListItems[6].style.backgroundColor='RED'
+        let heading1=document.querySelector('h1')
+        heading1.style.textAlign='center'
+        let heading2=document.querySelector('h2')
+        heading2.style.textAlign='center'
+        let d=document.getElementById('date')
+        var cur=new Date()
+        d.textContent=months[cur.getMonth()]+' '+cur.getDate()+', '+cur.getFullYear()+' '+cur.getHours()+':'+cur.getMinutes()+':'+cur.getSeconds()
+        d.style.textAlign='center'
+        var y=document.getElementById('year')
+        y.style.fontSize='100px'
+        function getRandomColor() 
+        {
+            var letters='0123456789ABCDEF';
+            var color='#';
+            for (var i=0;i<6;i++) 
+            {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function changeColor()
+        {
+            d.style.backgroundColor=getRandomColor()
+            y.style.color=getRandomColor()
+        }
+        setInterval(changeColor,1000);
+        </script>
+  </body>
+</html>

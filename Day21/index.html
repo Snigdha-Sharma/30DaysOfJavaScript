@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfScript:Day 21 Exercise</title>
+  </head>
+  <body>
+    <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button>
+    <!--External Script of JavaScript in Body-->
+      <p id='name'>Name: Snigdha Sharma</p>
+      <p id='regno'>Registration Number: 20184097</p>
+      <p id='group'>Group: CS-C</p>
+      <p id='branch'>Branch: Computer Science and Engineering</p>
+      <script>
+          console.log('Exercise Level 1')
+        //1)Create an index.html file and put four p elements as above: Get the first paragraph by using document.querySelector(tagname) and tag name
+        console.log(document.querySelector('p'))
+        //2)Get each of the paragraph using document.querySelector('#id') and by their id
+        console.log(document.querySelector('#name')) 
+        console.log(document.querySelector('#regno'))
+        console.log(document.querySelector('#group'))
+        console.log(document.querySelector('#branch'))
+        //3)Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name
+        let allp=document.querySelectorAll('p')
+        console.log(allp)
+        //4)Loop through the nodeList and get the text content of each paragraph
+        for(let i=0;i<allp.length;i++)
+        {
+            console.log(allp[i].textContent)
+        }
+        //5)Set a text content to paragraph the fourth paragraph,Fourth Paragraph
+        allp[3].textContent='Fourth Paragraph'
+        //6)Set id and class attribute for all the paragraphs using different attribute setting methods
+        for(let i=0;i<allp.length;i++)
+        {
+            allp[i].setAttribute('content','contentid')
+        }
+        console.log('Exercise Level 2')
+        //1)Change style of each paragraph using JavaScript(eg. color, background, border, font-size, font-family)
+        console.log('Exercise Level 3')
+        allp.forEach((p,i)=>{
+            p.style.color='PINK'
+        })
+        //2)Select all paragraphs and loop through each elements and give the first and third paragraph a color of green, and the second and the fourth paragraph a red 
+        //color
+        allp.forEach((p,i)=>{
+            if(i%2==0)
+            {
+                p.style.color='RED'
+            }
+            else
+            {
+                p.style.color='GREEN'
+            }
+        })
+        //3)Set text content, id and class to each paragraph
+        allp.forEach(p=>p.setAttribute('content1','id1'))
+      </script>
+      
+  </body>
+</html>
