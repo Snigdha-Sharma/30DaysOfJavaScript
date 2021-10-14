@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>World Countries List</title>
+    <style>
+        body 
+        {
+            background-image: url('images/globe-2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">WORLD COUNTRIES LIST</h1>
+    <h3 id="subHeading">Total Number of countries:</h3>
+    <h4 id="dynamicHeading"></h4>
+    <div style="display:flex;justify-content:center;">
+        <button id='searchByStartingWord' style="height:50px;width:150px">STARTING WORD</button>
+        <button id='searchWithAnyWord' style="height:50px;width:200px;">SEARCH WITH ANY WORD</button>
+        <button id='sort' style="height:50px;width:50px;background-color:rgb(51,51,255)"><i id="sortIcon" class="fa fa-sort-alpha-asc" style="color: white;font-size:xx-large;background-color: blue;"></i></button>
+    </div>
+    <div style="display:flex;justify-content:center;margin:20px">
+        <input type="text" id="mass" placeholder="Search Country..." style="border-radius: 20px;width: 500px;height: 40px;text-align:center;font-size:medium;border:2px solid aqua"/>
+        <button style="background:transparent;border-color:transparent"><i class="fa fa-search" style="color: white;font-size:xx-large;"></i></button>
+    </div>
+    
+    <script src="./data/countries_data.js"></script>
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
